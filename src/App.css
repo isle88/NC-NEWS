@@ -1,6 +1,9 @@
 
 .App {
   text-align: center;
+  background-color: #b8c7bf;
+  width: 100vw;
+  height: 100vh;
 }
 
 a {
@@ -25,29 +28,32 @@ a {
   height: 30px;
 }
 
+
 /* articles css */
-.Articles {
+.article, .topic{
   text-align: left;
   background-color: #b8c7bf;
+  color: #4d5964;
   /* border: 1px solid greenyellow */
 }
-.h6__created_at {
+
+.articleCard__created_at, .topic__created_at {
   text-align: right;
   margin-bottom: 0px;
 }
 
-.p__topic {
+.articleCard__topic {
   color:#4d5964;
 }
 
-.p__Articles {
+.article__title, .topic__title {
   padding: 10px 20px 0px 20px;
   margin-bottom: 0px;
-  color: #2f323e;
+  color: #4d5964;
 }
 
 ul {
-  padding: 0;
+  padding: 0px;
   list-style-type: none;
 }
 
@@ -70,6 +76,10 @@ h6 {
 
 h3 {
   margin: 5px
+}
+
+hr {
+ border-top: 1px solid #748380;
 }
 
 

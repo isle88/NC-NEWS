@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from 'react-router-dom';
 import { fetchTopics } from "../utils/api";
 
 export const Nav = () => {
@@ -12,8 +13,12 @@ export const Nav = () => {
   return (
     <nav className="Nav">
       <h3>
-        {topics.map((topicCard) => {
-          return topicCard.slug + "\n";
+        {topics.map((topic) => {
+          return (
+            <Link to={`/topics/${topic.slug}`} key={topic.slug}>
+              <span>{topic.slug}{' / '}</span>
+              </Link>
+            );
         })}
       </h3>
     </nav>
