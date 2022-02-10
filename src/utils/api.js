@@ -16,6 +16,19 @@ export const fetchArticles = () => {
   });
 };
 
+export const fetchComment = (article_id) => {
+  return myApi.get(`/articles/${article_id}/comments`)
+  .then(({ data }) => {
+    return data.comments;
+  })
+};
+
+export const patchArticles = (article_id) => {
+  return myApi.patch(`/articles/${article_id}`, { inc_votes: 0 })
+  .then(({ data }) => {
+    return data.articles;
+  })
+}
 
 // export const fetchArticlesBy = (order, sort_by) => {
 //   return myApi
@@ -24,4 +37,3 @@ export const fetchArticles = () => {
 //       return data.articles;
 //     });
 // };
-

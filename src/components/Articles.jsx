@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { fetchArticles } from "../utils/api";
-import { ArticleCard } from "./ArticleCard";
+import { AddVote } from './AddVote';
 
 export const Articles = () => {
   const { article_id } = useParams();
@@ -13,7 +13,7 @@ export const Articles = () => {
     });
   }, [setArticles]);
 
-  function filterbyId(articles) {
+  function filteredById(articles) {
     const result = articles.filter(
       (article) => article.article_id === Number(article_id)
     );
@@ -23,28 +23,34 @@ export const Articles = () => {
   return (
     <div className="article">
       {article_id ? (
+        // article by article_id
         <>
           <ul>
-            {filterbyId(articles).map((article) => {
+            {filteredById(articles).map((article) => {
               return (
+                <Link
+                to={`/articles/${article.article_id}/comments`}
+                key={article.article_id}
+              >
                 <li key={article.article_id}>
                   <h5>{article.author}</h5>
                   <p>{article.title}</p>
                   <h6 className="articleCard__created_at">
-                      {article.created_at}
-                    </h6>
-                    <hr />
-                    <h6>
-                      votes: {article.votes} comment: {article.comment_count}{" "}
-                    </h6>
+                    {article.created_at}
+                  </h6>
+                  <hr />
+                  <h6>votes: {article.votes} comment: {article.comment_count} </h6>
+                  {/* <AddVote addVote={article.votes} article_id={article.article_id}/>      */}
                 </li>
+                </Link>
               );
-            })}       
+            })}
           </ul>
         </>
       ) : (
+        // all the articles
         <>
-          <p className="article__title">Articles</p>
+          <p className="article__title"># All</p>
           <ul>
             {articles.map((article) => {
               return (
@@ -63,6 +69,7 @@ export const Articles = () => {
                     <h6>
                       votes: {article.votes} comment: {article.comment_count}{" "}
                     </h6>
+                    <AddVote addVote={article.votes} article_id={article.article_id}/>     
                   </li>
                 </Link>
               );
