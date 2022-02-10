@@ -1,19 +1,20 @@
+
 import { useState } from "react";
-import { patchArticles } from "../utils/api";
+import { patchArticle } from "../utils/api";
 
-export const AddVote = ({ article_id, addVote }) => {
+export const AddVote = ({ articleId, votes }) => {
+  const [votesCount, setVotesCount] = useState(votes);
 
-  const [votesCount, setVotesCount] = useState(0);
-
-  function plusVote() {
-
+  function addOne() {
     setVotesCount((current) => current + 1);
-    patchArticles(article_id)
+    patchArticle(articleId).catch((err) => {
+    setVotesCount((current) => current - 1);
+    });
   }
-  {console.log(votesCount, typeof votesCount)}
-  return (
-    <>
-      <button onClick={() => plusVote()}>vote {addVote + votesCount}</button>
-    </>
-  );
+
+    return (
+      <>
+        <button onClick={() => addOne()}>{votesCount} votes</button>
+      </>
+    );
 };

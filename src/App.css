@@ -3,7 +3,8 @@
   text-align: center;
   background-color: #b8c7bf;
   width: 100vw;
-  height: 100vh;
+  height: 220vh;
+
 }
 
 a {
@@ -30,27 +31,59 @@ a {
 
 
 /* articles css */
-.article, .topic{
+div{
   text-align: left;
   background-color: #b8c7bf;
   color: #4d5964;
+  height: auto;
   /* border: 1px solid greenyellow */
 }
 
-.articleCard__created_at, .topic__created_at {
+.created_at {
   text-align: right;
   margin-bottom: 0px;
 }
 
-.articleCard__topic {
+.Articles__topic, .ArticleCard_topic {
   color:#4d5964;
 }
 
-.article__title, .topic__title {
+.Articles__title, .SingleTopic__title {
   padding: 10px 20px 0px 20px;
   margin-bottom: 0px;
   color: #4d5964;
 }
+
+.top__button {
+  margin-left: 45%;
+}
+
+.Comments__filteredArticle {
+  border: none;
+  margin: 5px;
+  text-align: center;
+}
+
+Button {
+  display: block;
+  border: 0px;
+	background-color:#b8c7bf;
+	cursor:pointer;
+	color:#4d5964;
+  font-weight: bold;
+  font-size:0.75rem;
+	padding:6px 12px;
+	text-decoration:center;
+  transition: all 0.9s, color 0.3;
+
+}
+Button:hover {
+  background-color: #b8c7bf;
+  color:#748380
+}
+Button:active {
+	position:relative;
+} 
 
 ul {
   padding: 0px;
@@ -70,19 +103,21 @@ p {
   margin: 0px 0px 10px 0px;
 }
 
+h5 {
+  margin: 5px 0px;
+}
+
 h6 {
   margin: 0px 0px 0px 0px;
 }
 
 h3 {
-  margin: 5px
+  margin: 5px;
 }
 
 hr {
  border-top: 1px solid #748380;
 }
-
-
 
 /* .App-header {
   background-color: #282c34;
@@ -94,3 +129,5 @@ hr {
   font-size: calc(10px + 2vmin);
   color: white;
 } */
+
+

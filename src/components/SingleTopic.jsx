@@ -27,30 +27,39 @@ export const SingleTopic = () => {
   }, [setArticles]);
   
   return (
-    <div className="topic">
-      <p className="topic__title">{`# ${topic}`}</p>
+    <div>
+      <p className="SingleTopic__title">{`# ${topic}`}</p>
       {topics.length ? (
         <ul>
           {topics.map((topic) => {
             return (
-              <Link to={`/articles/${topic.article_id}`}>
               <li key={topic.article_id}>
-                <h6>{topic.author}</h6>
+                <Link to={`/articles/${topic.article_id}`}>
                 <p>{topic.title}</p>
-                <h6 className="topic__created_at">{topic.created_at}</h6>
                 <hr />
-                <h6>
-                  votes: {topic.votes} comments: {topic.comment_count}
-                </h6>
-              </li>
+                <h6 className="created_at">{topic.created_at}</h6>
               </Link>
+              </li>
             );
           })}
         </ul>
       ) : (
         <p>Loading...</p>
       )}
+         <button className='top__button'
+        onClick={() =>
+          window.scroll({
+            top: 0,
+            left: 0,
+            behavior: "smooth",
+          })
+        }
+      >
+        Top
+      </button>
     </div>
   );
 
 };
+
+
