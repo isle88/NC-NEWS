@@ -12,9 +12,18 @@ export const AddVote = ({ articleId, votes }) => {
     });
   }
 
+  function subtractOne() {
+    setVotesCount((current) => current - 1);
+    patchArticle(articleId).catch((err) => {
+    setVotesCount((current) => current + 1);
+    });
+  }
+
     return (
       <>
-        <button onClick={() => addOne()}>{votesCount} votes</button>
+        <button onClick={() => addOne()}>🙂</button>
+        <button>votes: {votesCount}</button>
+        <button onClick={() => subtractOne()}>🙁</button>
       </>
     );
 };

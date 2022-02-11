@@ -25,14 +25,14 @@ export const ArticleCard = () => {
                   to={`/articles/${article.article_id}/comments`}
                   key={article.article_id}
                 >
+                  <h6 className="created_at">
+                    {article.created_at}
+                  </h6>
                   <p className="ArticleCard__topic"># {article.topic}</p>
                   <h6>{article.author}</h6>
                   <p>{article.title}</p>
                 </Link>
                 <hr />
-                  <h6 className="created_at">
-                    {article.created_at}
-                  </h6>
                 <AddVote votes={article.votes} articleId={article.article_id} />
                 <h6>comment: {article.comment_count} </h6>
               </li>

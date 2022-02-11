@@ -2,7 +2,7 @@
 .App {
   text-align: center;
   background-color: #b8c7bf;
-  width: 100vw;
+  width: auto;
   height: 220vh;
 
 }
@@ -56,6 +56,7 @@ div{
 
 .top__button {
   margin-left: 45%;
+  font-size: 1em;
 }
 
 .Comments__filteredArticle {
@@ -65,14 +66,14 @@ div{
 }
 
 Button {
-  display: block;
+  display: inline;
   border: 0px;
 	background-color:#b8c7bf;
 	cursor:pointer;
 	color:#4d5964;
   font-weight: bold;
   font-size:0.75rem;
-	padding:6px 12px;
+	padding:3px 3px;
 	text-decoration:center;
   transition: all 0.9s, color 0.3;
 

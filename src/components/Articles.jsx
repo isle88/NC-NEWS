@@ -22,12 +22,11 @@ export const Articles = () => {
               key={article.article_id}
             >
               <li key={article.article_id}>
-                <p className="Articles__topic">#{article.topic}</p>
-                <p>{article.title}</p>
-                <hr />
                 <h6 className="created_at">
                   {article.created_at}
                 </h6>
+                <p className="Articles__topic">#{article.topic}</p>
+                <p>{article.title}</p>
               </li>
             </Link>
           );

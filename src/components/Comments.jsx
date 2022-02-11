@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from 'react-router-dom';
 import { fetchArticles, fetchComments } from "../utils/api";
-import { AddVote } from './AddVote';
 
 export const Comments = () => {
   const [comments, setComments] = useState([]);
@@ -36,15 +35,14 @@ export const Comments = () => {
         {comments.map((comment) => {
           return (
             <li key={comment.comment_id}>
+              <h6 className='created_at'>{comment.created_at}</h6>
               <h5>{comment.author}</h5>
               <p>{comment.body}</p>
-              <hr />
-              <h6 className='created_at'>{comment.created_at}</h6>
             </li>
           );
         })}
       </ul>
-      <button
+      <button className='top__button'
         onClick={() =>
           window.scroll({
             top: 0,
