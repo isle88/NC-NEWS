@@ -7,7 +7,7 @@ export const SingleTopic = () => {
   const [articles, setArticles] = useState([]);
   const { topic } = useParams();
 
-  function filteredByTopic(articles) {
+  const filteredByTopic = (articles) => {
     const result = articles.filter((article) => article.topic === topic);
     return result;
   }

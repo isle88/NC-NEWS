@@ -5,14 +5,14 @@ import { patchArticle } from "../utils/api";
 export const AddVote = ({ articleId, votes }) => {
   const [votesCount, setVotesCount] = useState(votes);
 
-  function addOne() {
+  const addOne = () => {
     setVotesCount((current) => current + 1);
     patchArticle(articleId).catch((err) => {
     setVotesCount((current) => current - 1);
     });
   }
 
-  function subtractOne() {
+  const subtractOne = () => {
     setVotesCount((current) => current - 1);
     patchArticle(articleId).catch((err) => {
     setVotesCount((current) => current + 1);

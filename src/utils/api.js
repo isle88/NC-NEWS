@@ -30,3 +30,11 @@ export const patchArticle = (article_id) => {
     })
 };
 
+export const postComment = (article_id, comment) => {
+  return myApi
+  .post(`/articles/${article_id}/comments`, comment)
+  .then(({ data }) => {
+    return data
+  })
+}
+

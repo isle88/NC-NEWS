@@ -25,12 +25,10 @@ a {
   /* border: 1px solid royalblue; */
   background-color: #b8c7bf;
   color: #4d5964;
-  padding: 5px;
+  padding: 15px;
   height: 30px;
 }
 
-
-/* articles css */
 div{
   text-align: left;
   background-color: #b8c7bf;
@@ -39,7 +37,11 @@ div{
   /* border: 1px solid greenyellow */
 }
 
-.created_at {
+.Header__login
+ {
+   margin-left: 65%;
+ }
+.created_at, .Comment__article-author {
   text-align: right;
   margin-bottom: 0px;
 }
@@ -63,6 +65,7 @@ div{
   border: none;
   margin: 5px;
   text-align: center;
+  font-style: italic;
 }
 
 Button {
@@ -109,15 +112,25 @@ h5 {
 }
 
 h6 {
-  margin: 0px 0px 0px 0px;
+  margin: 0;
 }
 
 h3 {
   margin: 5px;
+  padding: 5px;
+}
+
+h4{ 
+  margin: 0;
+
 }
 
 hr {
  border-top: 1px solid #748380;
+}
+
+h1 {
+  margin: 10px ;
 }
 
 /* .App-header {
