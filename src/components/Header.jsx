@@ -7,7 +7,7 @@ export const Header = () => {
   const { loggedIn, setLoggedIn } = useContext(LoginContext)
 
  
-  const toggleLogIn = () => {
+  const toggleLogIn = (e) => {
     setLoggedIn((current) => {
       return current === 'LOGIN' ? `jessjelly` : 'LOGIN'
     })
