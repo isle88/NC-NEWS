@@ -1,4 +1,5 @@
 
+
 .App {
   text-align: center;
   background-color: #b8c7bf;
@@ -136,6 +137,10 @@ h1 {
   margin: 10px ;
 }
 
+.sort {
+  padding-inline-start: 10rem;
+  justify-items: center;
+}
 /* .App-header {
   background-color: #282c34;
   min-height: 100vh;
