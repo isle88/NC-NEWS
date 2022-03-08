@@ -14,7 +14,7 @@ export const ArticleCard = () => {
   }, [setArticles]);
 
   return (
-    <div>
+    <div> 
       <ul>
         {articles
           .filter((article) => article.article_id === Number(article_id))
