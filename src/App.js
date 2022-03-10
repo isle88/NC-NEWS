@@ -22,6 +22,7 @@ function App() {
           <Route path="/topics/:topic" element={<SingleTopic />} />
           <Route path="/articles/:article_id" element={<ArticleCard />} />
           <Route path="articles/:article_id/comments" element={<Comments />} />
+          <Route path="*" element={<p className='notFound'>Page Not Found</p>} />
         </Routes>
         </LoginContext.Provider> 
       </BrowserRouter>
