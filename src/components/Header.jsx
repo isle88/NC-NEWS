@@ -18,7 +18,7 @@ export const Header = () => {
     <header className="Header">
       <Link to='/'>
       <h1>NC-NEWS</h1>
-      <button onClick={() => toggleLogIn()} className='Header__login' >{loggedIn}</button>
+      <button style={{border: "2px solid #aaa", background: "#FFFF", borderRadius: 5}} onClick={() => toggleLogIn()} className='Header__login' >{loggedIn}</button>
       </Link>
     </header>
     </>
