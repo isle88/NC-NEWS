@@ -16,7 +16,7 @@ export const Nav = () => {
         {topics.map((topic) => {
           return (
             <Link to={`/topics/${topic.slug}`} key={topic.slug}>
-              <span>{topic.slug}{' / '}</span>
+              <span style={{marginRight:10, fontSize: 18}}>{topic.slug}</span>
               </Link>
             );
         })}
