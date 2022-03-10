@@ -1,24 +1,22 @@
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import { fetchArticles } from "../utils/api";
+import { fetchArticleById } from "../utils/api";
 import { AddVote } from "./AddVote";
 
 export const ArticleCard = () => {
-  const [articles, setArticles] = useState([]);
+  const [articleById, setArticleById] = useState([])
   const { article_id } = useParams();
 
   useEffect(() => {
-    fetchArticles().then((ArticlesFromApi) => {
-      setArticles(ArticlesFromApi);
-    });
-  }, [setArticles]);
+    fetchArticleById(article_id).then((ArticleFromApi) => {
+      setArticleById([ArticleFromApi])
+    })
+  }, [setArticleById, article_id])
 
   return (
     <div> 
       <ul>
-        {articles
-          .filter((article) => article.article_id === Number(article_id))
-          .map((article) => {
+        { articleById.map((article) => {
             return (
               <li key={article.article_id}>
                 <Link
@@ -31,6 +29,7 @@ export const ArticleCard = () => {
                   <p className="ArticleCard__topic"># {article.topic}</p>
                   <h6>{article.author}</h6>
                   <p>{article.title}</p>
+                  <p>{article.body}</p>
                 </Link>
                 <hr />
                 <AddVote votes={article.votes} articleId={article.article_id} />
