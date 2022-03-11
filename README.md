@@ -21,7 +21,7 @@ Nc-News has articles which are divided into topics. Each article has user curate
 
 
 ## Link to hosted Version
-
+- https://hyunjung-nc-news.netlify.app/
 
 ## Link to Back-End of the project
 - Repository: https://github.com/isle88/be-nc-news
@@ -33,4 +33,3 @@ Nc-News has articles which are divided into topics. Each article has user curate
 - Clone the NC-NEWS repo `https://github.com/isle88/nc-news.git`
 - Run npm i to install node, axios, react-router-dom
 - Run npm start it will start react.
-
