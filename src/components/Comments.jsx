@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import { LoginContext } from "../contexts/Login";
 import {
   deleteComment,
-  fetchArticles,
+  fetchArticleById,
   fetchComments,
   postComment,
 } from "../utils/api";
@@ -20,17 +20,17 @@ export const Comments = () => {
   const writeComment = { username, body };
 
   useEffect(() => {
+    fetchArticleById(article_id).then((articlesFromApi) => {
+      setArticles([articlesFromApi]);
+    });
+  }, [setArticles, article_id]);
+  
+  useEffect(() => {
     fetchComments(article_id).then((commentsFromApi) => {
       setComments(commentsFromApi);
       setCommentsCount(comments.length);
     });
   }, [article_id, comments.length]);
-
-  useEffect(() => {
-    fetchArticles().then((articlesFromApi) => {
-      setArticles(articlesFromApi);
-    });
-  }, [setArticles]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -39,7 +39,6 @@ export const Comments = () => {
     setCommentsCount((curr) => curr + 1);
   };
 
-  
     const handleInput = (e) => {
       setBody(e.target.value);
     };
@@ -64,16 +63,14 @@ export const Comments = () => {
       {loggedIn === "jessjelly" ? (
         <div>
           <ul>
-            {articles
-              .filter((article) => article.article_id === Number(article_id))
-              .map((filteredArticle) => (
+            {articles.map((article) => (
                 <li
                   className="Comments__filteredArticle"
-                  key={filteredArticle.article_id}
+                  key={article.article_id}
                 >
-                  <h4>{filteredArticle.title}</h4>
+                  <h4>{article.title}</h4>
                   <h6 className="Comment__article-author">
-                    by {filteredArticle.author}
+                    by {article.author}
                   </h6>
                 </li>
               ))}
@@ -124,16 +121,14 @@ export const Comments = () => {
       ) : (
         <div>
           <ul>
-            {articles
-              .filter((article) => article.article_id === Number(article_id))
-              .map((filteredArticle) => (
+          {articles.map((article) => (
                 <li
                   className="Comments__filteredArticle"
-                  key={filteredArticle.article_id}
+                  key={article.article_id}
                 >
-                  <h4>{filteredArticle.title}</h4>
+                  <h4>{article.title}</h4>
                   <h6 className="Comment__article-author">
-                    by {filteredArticle.author}
+                    by {article.author}
                   </h6>
                 </li>
               ))}
