@@ -4,7 +4,7 @@
   text-align: center;
   background-color: #b8c7bf;
   width: auto;
-  height: 220vh;
+  height: 100%;
 
 }
 
@@ -14,7 +14,6 @@ a {
 }
 
 .Header {
-  /* border: 1px solid rosybrown; */
   background-color: #b8c7bf;
   color: #2f323e;
   padding: 5px;
@@ -22,7 +21,6 @@ a {
 }
 
 .Nav {
-  /* border: 1px solid royalblue; */
   background-color: #b8c7bf;
   color: #4d5964;
   padding: 15px;
@@ -34,7 +32,6 @@ div{
   background-color: #b8c7bf;
   color: #4d5964;
   height: auto;
-  /* border: 1px solid greenyellow */
 }
 
 .input__div {
@@ -63,6 +60,11 @@ div{
 .top__button {
   margin-left: 45%;
   font-size: 1em;
+}
+
+.top__button2 {
+    justify-content: center;
+    font-size: 1em;
 }
 
 .Comments__filteredArticle {
@@ -137,19 +139,5 @@ h1 {
   margin: 10px ;
 }
 
-.sort {
-  padding-inline-start: 10rem;
-  justify-items: center;
-}
-/* .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-} */
 
 
