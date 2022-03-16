@@ -1,9 +1,13 @@
 # NC-NEWS
 
 NC-News is a social media website that allows for the user to rate its content and comment on articles.
-Nc-News has articles which are divided into topics. Each article has user curated ratings and can be up or down voted using the API. Users can also add comments about an article.
-#### This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Nc-News has articles which are divided into topics. Each article has user curated ratings and can be up or down voted using the API. 
+Users can also add comments about an article.
 
+## Stack
+
+- React
+- MUI
 
 ## Description
 
@@ -18,7 +22,6 @@ Nc-News has articles which are divided into topics. Each article has user curate
         ◦ comment_count
         ◦ votes
 8. delete my own comments (as a default logged in user. e.g. 'jessjelly').
-
 
 ## Link to hosted Version
 - https://hyunjung-nc-news.netlify.app/
