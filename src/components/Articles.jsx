@@ -25,7 +25,7 @@ export const Articles = () => {
                 <h6 className="created_at">
                   {article.created_at}
                 </h6>
-                <p className="Articles__topic">#{article.topic}</p>
+                <h5 className="Articles__topic">#{article.topic}</h5>
                 <p>{article.title}</p>
               </li>
             </Link>

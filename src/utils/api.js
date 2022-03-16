@@ -36,6 +36,14 @@ export const patchArticle = (article_id) => {
     })
 };
 
+export const patchComment = (comment_id) => {
+  return myApi
+   .patch(`/comments/${comment_id}`, { inc_votes: 1 })
+   .then(({ data }) => {
+     return data.comment
+   })
+}
+
 export const postComment = (article_id, comment) => {
   return myApi
   .post(`/articles/${article_id}/comments`, comment)

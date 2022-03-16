@@ -67,7 +67,7 @@ export const SingleTopic = () => {
   };
 
   return (
-    <>
+    <div>
       <p className="SingleTopic__title">{`# ${topic}`}</p>
       <div className="sort">
         <SortBySelect />
@@ -102,6 +102,6 @@ export const SingleTopic = () => {
       >
         Top
       </button>
-    </>
+    </div>
   );
 };
