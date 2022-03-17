@@ -35,7 +35,7 @@ Users can also add comments about an article.
 - Hosted version: https://hyunjungs-nc-news.herokuapp.com/api/
 
 ## How to run this project
-** To run this project you need node v17 as minimum version
+**To run this project you need node v17 as minimum version
 
 - Clone the NC-NEWS repo `https://github.com/isle88/nc-news.git`
 - Run npm i to install node, axios, react-router-dom
