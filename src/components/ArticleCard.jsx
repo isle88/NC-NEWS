@@ -32,8 +32,10 @@ export const ArticleCard = () => {
                   <p>{article.body}</p>
                 </Link>
                 <hr />
+                <div className='addVote__div'>
                 <AddVote votes={article.votes} articleId={article.article_id} />
                 <h6>comment: {article.comment_count} </h6>
+                </div>
               </li>
             );
           })}

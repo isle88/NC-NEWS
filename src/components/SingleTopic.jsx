@@ -11,7 +11,7 @@ export const SingleTopic = () => {
   const [topics, setTopics] = useState([]);
   const [articles, setArticles] = useState([]);
   const { topic } = useParams();
-  const [sortBy, setSortBy] = useState("created_at");
+  const [sortBy, setSortBy] = useState("");
 
   useEffect(() => {
     fetchArticles()
@@ -39,11 +39,21 @@ export const SingleTopic = () => {
         votes: "votes",
       };
       const sortTopics = types[type];
-      const sorted = [...topics].sort((a, b) => b[sortTopics] - a[sortTopics]);
-      setTopics([...sorted]);
+
+      if (sortTopics === "created_at") {
+        const sortedCreated = [...topics].sort((a, b) => {
+          return (
+            new Date(b[sortTopics]).getTime() - new Date(a[sortTopics]).getTime()
+          );
+        });
+        setTopics(sortedCreated);
+      } else {
+        const sorted = [...topics].sort((a, b) => b[sortTopics] - a[sortTopics]);
+        setTopics(sorted);       
+      }
     };
-    sortArray(sortBy);
-  }, [sortBy, setTopics]) // eslint-disable-line react-hooks/exhaustive-deps
+    sortArray(sortBy)
+  }, [sortBy, setTopics]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const SortBySelect = () => {
     return (
@@ -51,12 +61,10 @@ export const SingleTopic = () => {
         <Box sx={{ minWidth: 60 }}>
           <FormControl fullWidth>
             <InputLabel variant="standard" htmlFor="uncontrolled-native">
-              Sort_by
+              Sort by
             </InputLabel>
             <NativeSelect defaultValue={sortBy}>
-              <option value={"created_at"} navigate="">
-                Created
-              </option>
+              <option value={"created_at"}>Created</option>
               <option value={"comment_count"}>Comments</option>
               <option value={"votes"}>Votes</option>
             </NativeSelect>
@@ -87,7 +95,7 @@ export const SingleTopic = () => {
         </ul>
       ) : (
         <>
-        <p>Loading...</p>
+          <p>Loading...</p>
         </>
       )}
       <button
