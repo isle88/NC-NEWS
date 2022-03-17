@@ -54,6 +54,7 @@ input {
 
 .Articles__topic, .ArticleCard_topic {
   color:#4d5964;
+  margin: 0;
 }
 
 .Articles__title, .SingleTopic__title {
@@ -63,13 +64,15 @@ input {
 }
 
 .top__button {
-  margin-left: 45%;
+  margin-left: 50%;
   font-size: 1em;
+  background-color: white;
 }
 
 .top__button2 {
-    justify-content: center;
-    font-size: 1em;
+  margin-left: 50%;
+  font-size: 1em;
+  background-color: white;
 }
 
 .Comments__filteredArticle {
@@ -83,7 +86,7 @@ input {
   display: flex;
   justify-content:right;
   padding: 0.5rem;
-  min-width: 10rem;
+  min-width: 15rem;
 }
 Button {
   display: inline;
@@ -110,7 +113,7 @@ ul {
 }
 
 li {
-  margin: 0px 10px 20px 10px;
+  margin: 0px 10px 10px 10px;
   border: 1px solid #748380;
   border-radius: 3px;
   padding: 10px 20px;
@@ -120,6 +123,7 @@ li {
 
 p {
   margin: 0px 0px 10px 0px;
+  font-size: smaller;
 }
 
 h5 {
