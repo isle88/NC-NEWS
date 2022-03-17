@@ -18,10 +18,14 @@ Users can also add comments about an article.
 5. vote on an article and immediately see the changes.
 6. post a new comment to an existing article (as a default logged in user. e.g. 'jessjelly').
 7. sort articles by:
-        ◦ date created
-        ◦ comment_count
-        ◦ votes
+      ◦ created
+      ◦ comments
+      ◦ votes
 8. delete my own comments (as a default logged in user. e.g. 'jessjelly').
+9. sort comments by:
+      ◦ created
+      ◦ votes
+10. vote on comments and immediately see the changes.
 
 ## Link to hosted Version
 - https://hyunjung-nc-news.netlify.app/
