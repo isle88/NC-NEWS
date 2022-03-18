@@ -1,7 +1,6 @@
 .App {
   text-align: center;
   width: auto;
-  min-height: 100vh;
   height : 100vh !important;
 }
 
@@ -63,14 +62,8 @@ input {
   color: #4d5964;
 }
 
-.top__button {
-  margin-left: 50%;
-  font-size: 1em;
-  background-color: white;
-}
-
-.top__button2 {
-  margin-left: 50%;
+.top__button, .top__button2 {
+  margin-left: 45%;
   font-size: 1em;
   background-color: white;
 }
@@ -98,6 +91,7 @@ Button {
 	padding:3px 3px;
 	text-decoration:center;
   transition: all 0.9s, color 0.3;
+  background-color: none;
 
 }
 Button:hover {
@@ -150,5 +144,3 @@ hr {
 h1 {
   margin: 10px;
 }
-
-

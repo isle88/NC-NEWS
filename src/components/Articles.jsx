@@ -13,26 +13,34 @@ export const Articles = () => {
 
   return (
     <div>
-      <p className="Articles__title"># All</p>
-      <ul>
-        {articles.map((article) => {
-          return (
-            <Link
-              to={`/articles/${article.article_id}`}
-              key={article.article_id}
-            >
-              <li key={article.article_id}>
-                <h6 className="created_at">
-                  {article.created_at}
-                </h6>
-                <h5 className="Articles__topic">#{article.topic}</h5>
-                <p>{article.title}</p>
-              </li>
-            </Link>
-          );
-        })}
-      </ul>
-      <button className='top__button'
+      {articles ? (
+        <>
+          <p className="Articles__title"># All</p>
+          <ul>
+            {articles.map((article) => {
+              return (
+                <Link
+                  to={`/articles/${article.article_id}`}
+                  key={article.article_id}
+                >
+                  <li key={article.article_id}>
+                    <h6 className="created_at">{article.created_at}</h6>
+                    <h5 className="Articles__topic">#{article.topic}</h5>
+                    <p>{article.title}</p>
+                  </li>
+                </Link>
+              );
+            })}
+          </ul>
+        </>
+      ) : (
+        <>
+          <p>is Loading...</p>
+        </>
+      )}
+
+      <button
+        className="top__button"
         onClick={() =>
           window.scroll({
             top: 0,
