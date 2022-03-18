@@ -18,13 +18,13 @@ Users can also add comments about an article.
 5. vote on an article and immediately see the changes.
 6. post a new comment to an existing article (as a default logged in user. e.g. 'jessjelly').
 7. sort articles by:
-      ◦ created
-      ◦ comments
-      ◦ votes
+      - created
+      - comments
+      - votes
 8. delete my own comments (as a default logged in user. e.g. 'jessjelly').
 9. sort comments by:
-      ◦ created
-      ◦ votes
+      - created
+      - votes
 10. vote on comments and immediately see the changes.
 
 ## Link to hosted Version
@@ -37,6 +37,6 @@ Users can also add comments about an article.
 ## How to run this project
 **To run this project you need node v17 as minimum version**
 
-- Clone the NC-NEWS repo `https://github.com/isle88/nc-news.git`
+- Clone the NC-NEWS repo `https://github.com/isle88/react-nc-news.git`
 - Run npm i to install node, axios, react-router-dom
 - Run npm start it will start react.
