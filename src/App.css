@@ -1,7 +1,7 @@
 .App {
   text-align: center;
   width: auto;
-  height : 100vh !important;
+  height: 100vh !important;
 }
 
 a {
@@ -15,57 +15,65 @@ a {
   height: 70px;
 }
 
+.Header__login, .comment__delete {
+  border: 1px solid #4d5964;
+  border-radius: 4px;
+  padding: 3px;
+  margin-left: 75%;
+  background-color: #eceff1;;
+}
+
 .Nav {
   color: #4d5964;
   padding: 15px;
   height: 30px;
 }
 
-div{
+div {
   text-align: left;
   color: #4d5964;
   height: auto;
 }
 
-.input__div, .addVote__div {
-  padding: 0.5rem ;
+.input__div,
+.addVote__div {
+  padding: 0.5rem;
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
 
 input {
-  margin: 0.5rem;
+  margin: 0.3rem;
   width: 15rem;
-  overflow-wrap: break-word; 
+  overflow-wrap: break-word;
   height: 2rem;
   white-space: initial;
 }
 
-.Header__login
- {
-   margin-left: 65%;
- }
-.created_at, .Comment__article-author {
+.created_at,
+.Comment__article-author {
   text-align: right;
   margin-bottom: 0px;
 }
 
-.Articles__topic, .ArticleCard_topic {
-  color:#4d5964;
+.Articles__topic,
+.ArticleCard_topic {
+  color: #4d5964;
   margin: 0;
 }
 
-.Articles__title, .SingleTopic__title {
+.Articles__title,
+.SingleTopic__title {
   padding: 10px 20px 0px 20px;
   margin-bottom: 0px;
   color: #4d5964;
 }
 
-.top__button, .top__button2 {
+.top__button,
+.top__button2 {
   margin-left: 45%;
   font-size: 1em;
-  background-color: white;
 }
 
 .Comments__filteredArticle {
@@ -77,29 +85,28 @@ input {
 
 .sort {
   display: flex;
-  justify-content:right;
+  justify-content: right;
   padding: 0.5rem;
   min-width: 15rem;
 }
 Button {
   display: inline;
   border: 0px;
-	cursor:pointer;
-	color:#4d5964;
+  cursor: pointer;
+  color: #4d5964;
   font-weight: bold;
-  font-size:0.75rem;
-	padding:3px 3px;
-	text-decoration:center;
+  font-size: 0.75rem;
+  padding: 2px 2px;
   transition: all 0.9s, color 0.3;
-  background-color: none;
-
+  background-color: Transparent;
+  background-repeat: no-repeat;
 }
 Button:hover {
-  color:#748380;
+  color: #748380;
 }
 Button:active {
-	position:relative;
-} 
+  position: relative;
+}
 
 ul {
   padding: 0px;
@@ -133,12 +140,12 @@ h3 {
   padding: 5px;
 }
 
-h4{ 
+h4 {
   margin: 0;
 }
 
 hr {
- border-top: 1px solid #748380;
+  border-top: 1px solid #748380;
 }
 
 h1 {

@@ -145,7 +145,7 @@ export const Comments = () => {
                 <h5>{comment.author}</h5>
                 {comment.author === loggedIn ? (
                   <>
-                    <button value={comment.comment_id} onClick={handleDelete}>
+                    <button className='comment__delete'  value={comment.comment_id} onClick={handleDelete}>
                       Delete
                     </button>
                   </>
