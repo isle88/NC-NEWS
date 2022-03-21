@@ -35,7 +35,12 @@ div {
   height: auto;
 }
 
-.input__div,
+.input__div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
 .addVote__div {
   display: flex;
   flex-direction: row;
@@ -46,7 +51,11 @@ input {
   margin: 0.3rem;
   width: 15rem;
   overflow-wrap: break-word;
-  height: 2rem;
+  height: 2rem;.addVote__div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
   white-space: initial;
 }
 
@@ -68,6 +77,12 @@ input {
   margin-bottom: 0px;
   color: #4d5964;
 }
+
+.ArticleCard__title {
+  font-size: 20px;
+  font-style: italic;
+  margin-top: 5px;
+} 
 
 .top__button,
 .top__button2 {
@@ -154,6 +169,11 @@ hr {
 
 h1 {
   margin: 10px;
+}
+
+span {
+  margin-right:10px;
+  font-size: 20px;
 }
 
 @media (min-width: 689px) {

@@ -128,7 +128,7 @@ export const Comments = () => {
             return (
               <li key={comment.comment_id}>
                 <h6 className="created_at">{new Date(comment.created_at).toLocaleDateString("en-GB")}</h6>
-                <h5>{comment.author}</h5>
+                <h6>{comment.author}</h6>
                 {comment.author === loggedIn ? (
                   <>
                     <button className='comment__delete'  value={comment.comment_id} onClick={handleDelete}>
@@ -137,7 +137,6 @@ export const Comments = () => {
                   </>
                 ) : null}
                 <p>{comment.body}</p>
-                <hr />
                 <div className='addVote__div'>
                 <AddVote votes={comment.votes} commentId={comment.comment_id} />
                 </div>

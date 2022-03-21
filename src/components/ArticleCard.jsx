@@ -23,9 +23,8 @@ export const ArticleCard = () => {
                   <h6 className="created_at">
                     {new Date(article.created_at).toLocaleDateString("en-GB")}
                   </h6>
-                  <p style={{fontSize:20, fontStyle: 'italic', marginTop: 5}}>{article.title}</p>
+                  <p className='ArticleCard__title'>{article.title}</p>
                   <p>{article.body}</p>
-                <hr />
                 <div className='addVote__div'>
                 <h6 className='h6__comments'>{article.comment_count} comments</h6>
                 <AddVote votes={article.votes} articleId={article.article_id} />
