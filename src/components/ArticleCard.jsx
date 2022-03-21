@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { fetchArticleById } from "../utils/api";
 import { AddVote } from "./AddVote";
+import { Comments } from './Comments';
 
 export const ArticleCard = () => {
   const [articleById, setArticleById] = useState([])
@@ -19,26 +20,20 @@ export const ArticleCard = () => {
         { articleById.map((article) => {
             return (
               <li key={article.article_id}>
-                <Link
-                  to={`/articles/${article.article_id}/comments`}
-                  key={article.article_id}
-                >
                   <h6 className="created_at">
-                    {new Date(article.created_at).toLocaleDateString("en-US")}
+                    {new Date(article.created_at).toLocaleDateString("en-GB")}
                   </h6>
-                  <p className="ArticleCard__topic"># {article.topic}</p>
-                  <h6>{article.author}</h6>
-                  <p>{article.title}</p>
+                  <p style={{fontSize:20, fontStyle: 'italic', marginTop: 5}}>{article.title}</p>
                   <p>{article.body}</p>
-                </Link>
                 <hr />
                 <div className='addVote__div'>
+                <h6 className='h6__comments'>{article.comment_count} comments</h6>
                 <AddVote votes={article.votes} articleId={article.article_id} />
-                <h6>comment: {article.comment_count} </h6>
                 </div>
               </li>
             );
           })}
+          <Comments />
            <button className='top__button'
         onClick={() =>
           window.scroll({

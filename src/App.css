@@ -37,10 +37,9 @@ div {
 
 .input__div,
 .addVote__div {
-  padding: 0.5rem;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: right;
 }
 
 input {
@@ -89,6 +88,11 @@ input {
   padding: 0.5rem;
   min-width: 15rem;
 }
+
+.h6__comments {
+ margin-right: 15px;
+}
+
 Button {
   display: inline;
   border: 0px;
@@ -151,3 +155,9 @@ hr {
 h1 {
   margin: 10px;
 }
+
+@media (min-width: 689px) {
+  .App {
+    margin: 0 15%;
+  }
+} 

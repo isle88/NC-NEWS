@@ -86,8 +86,13 @@ export const SingleTopic = () => {
             return (
               <li key={topic.article_id}>
                 <Link to={`/articles/${topic.article_id}`}>
-                  <h6 className="created_at">{new Date(topic.created_at).toLocaleDateString("en-US")}</h6>
+                  <h6 className="created_at">{new Date(topic.created_at).toLocaleDateString("en-GB")}</h6>
+                  <h6>{topic.author}</h6>
                   <p>{topic.title}</p>
+                  <div className='addVote__div'>
+                  <h6 className='h6__comments'>{topic.comment_count} comments</h6>
+                  <h6>{topic.votes} votes</h6>
+                  </div>
                 </Link>
               </li>
             );

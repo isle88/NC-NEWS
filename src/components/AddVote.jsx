@@ -37,9 +37,9 @@ export const AddVote = ({ articleId, commentId, votes }) => {
 
     return (
       <>
-        <button onClick={() => addOne()}>🙂</button>
-        <h6>votes: {votesCount}</h6>
-        <button onClick={() => subtractOne()}>🙁</button>
+        <button onClick={() => addOne()}>&#x2B06;</button>
+        <h6>{votesCount} votes</h6>
+        <button onClick={() => subtractOne()}>&#x2B07;</button>
       </>
     );
 };

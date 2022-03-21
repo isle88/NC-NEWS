@@ -3,7 +3,6 @@ import { useParams } from "react-router-dom";
 import { LoginContext } from "../contexts/Login";
 import {
   deleteComment,
-  fetchArticleById,
   fetchComments,
   postComment,
 } from "../utils/api";
@@ -16,7 +15,6 @@ import NativeSelect from "@mui/material/NativeSelect";
 export const Comments = () => {
   const [comments, setComments] = useState([]);
   const [commentsCount, setCommentsCount] = useState();
-  const [articles, setArticles] = useState([]);
   let comment_id = "";
   const { loggedIn } = useContext(LoginContext);
   const username = loggedIn;
@@ -24,12 +22,6 @@ export const Comments = () => {
   const { article_id } = useParams();
   const writeComment = { username, body };
   const [sortBy, setSortBy] = useState("created_at");
-
-  useEffect(() => {
-    fetchArticleById(article_id).then((articlesFromApi) => {
-      setArticles([articlesFromApi]);
-    });
-  }, [setArticles, article_id]);
 
   useEffect(() => {
     fetchComments(article_id).then((commentsFromApi) => {
@@ -112,12 +104,6 @@ export const Comments = () => {
     <>
       <div>
         <ul>
-          {articles.map((article) => (
-            <li className="Comments__filteredArticle" key={article.article_id}>
-              <h4>{article.title}</h4>
-              <h6 className="Comment__article-author">by {article.author}</h6>
-            </li>
-          ))}
           <div className="sort">
             <SortBySelect />
           </div>
@@ -141,7 +127,7 @@ export const Comments = () => {
           {[...comments].map((comment) => {
             return (
               <li key={comment.comment_id}>
-                <h6 className="created_at">{new Date(comment.created_at).toLocaleDateString("en-US")}</h6>
+                <h6 className="created_at">{new Date(comment.created_at).toLocaleDateString("en-GB")}</h6>
                 <h5>{comment.author}</h5>
                 {comment.author === loggedIn ? (
                   <>
@@ -159,18 +145,6 @@ export const Comments = () => {
             );
           })}
         </ul>
-        <button
-          className="top__button"
-          onClick={() =>
-            window.scroll({
-              top: 0,
-              left: 0,
-              behavior: "smooth",
-            })
-          }
-        >
-          Top
-        </button>
       </div>
     </>
   );
