@@ -86,7 +86,7 @@ export const SingleTopic = () => {
             return (
               <li key={topic.article_id}>
                 <Link to={`/articles/${topic.article_id}`}>
-                  <h6 className="created_at">{topic.created_at}</h6>
+                  <h6 className="created_at">{new Date(topic.created_at).toLocaleDateString("en-US")}</h6>
                   <p>{topic.title}</p>
                 </Link>
               </li>

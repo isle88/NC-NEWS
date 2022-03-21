@@ -141,7 +141,7 @@ export const Comments = () => {
           {[...comments].map((comment) => {
             return (
               <li key={comment.comment_id}>
-                <h6 className="created_at">{comment.created_at}</h6>
+                <h6 className="created_at">{new Date(comment.created_at).toLocaleDateString("en-US")}</h6>
                 <h5>{comment.author}</h5>
                 {comment.author === loggedIn ? (
                   <>

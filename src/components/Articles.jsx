@@ -24,7 +24,7 @@ export const Articles = () => {
                   key={article.article_id}
                 >
                   <li key={article.article_id}>
-                    <h6 className="created_at">{article.created_at}</h6>
+                    <h6 className="created_at">{new Date(article.created_at).toLocaleDateString("en-US")}</h6>
                     <h5 className="Articles__topic">#{article.topic}</h5>
                     <p>{article.title}</p>
                   </li>

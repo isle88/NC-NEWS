@@ -24,7 +24,7 @@ export const ArticleCard = () => {
                   key={article.article_id}
                 >
                   <h6 className="created_at">
-                    {article.created_at}
+                    {new Date(article.created_at).toLocaleDateString("en-US")}
                   </h6>
                   <p className="ArticleCard__topic"># {article.topic}</p>
                   <h6>{article.author}</h6>
