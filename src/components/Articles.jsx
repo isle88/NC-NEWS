@@ -4,16 +4,18 @@ import { fetchArticles } from "../utils/api";
 
 export const Articles = () => {
   const [articles, setArticles] = useState([]);
+  const [isLoaded, setIsLoaded] = useState(false)
 
   useEffect(() => {
     fetchArticles().then((ArticlesFromApi) => {
       setArticles(ArticlesFromApi);
+      setIsLoaded(true)
     });
-  }, [setArticles]);
+  }, [setArticles, setIsLoaded]);
 
   return (
     <div>
-      {articles ? (
+      {isLoaded ? (
         <>
           <p className="Articles__title"># All</p>
           <ul>
