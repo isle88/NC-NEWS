@@ -31,7 +31,7 @@ Users can also add comments about an article.
 - https://hyunjung-nc-news.netlify.app/
 
 ## Link to Back-End of the project
-- Repository: https://github.com/isle88/be-nc-news
+- Repository: https://github.com/isle88/node-nc-news
 - Hosted version: https://hyunjungs-nc-news.herokuapp.com/api/
 
 ## How to run this project
