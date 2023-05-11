@@ -31,8 +31,8 @@ Users can also add comments about an article.
 - https://hyunjung-nc-news.netlify.app/
 
 ## Link to Back-End of the project
-- Repository: https://github.com/isle88/be-nc-news
-- Hosted version: https://hyunjungs-nc-news.herokuapp.com/api/
+- Repository: https://github.com/isle88/node-nc-news
+- Hosted version: https://hyunjung-kim.cyclic.app/api
 
 ## How to run this project
 **To run this project you need node v17 as minimum version**
